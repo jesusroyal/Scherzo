@@ -14,7 +14,8 @@ final class HomeViewController: UIViewController {
 
     @IBOutlet weak var setupLine: UILabel!
     @IBOutlet weak var punchLine: UILabel!
-
+    @IBOutlet weak var addToBookMarks: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -23,6 +24,8 @@ final class HomeViewController: UIViewController {
     private func setupView() {
         self.setupLine.text = ""
         self.punchLine.text = ""
+        addToBookMarks.isHidden = true
+        
     }
 
     @IBAction func jokeDidTap(_ sender: UIButton) {
@@ -37,6 +40,7 @@ final class HomeViewController: UIViewController {
             DispatchQueue.main.async {
                 self.setupLine.text = joke.setup
                 self.punchLine.text = joke.punchline
+                self.addToBookMarks.isHidden = false
                 self.hideLoading()
             }
         }
