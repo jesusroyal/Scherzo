@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		EC79CE4725A64C4D00E7C58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE4625A64C4D00E7C58D /* AppDelegate.swift */; };
 		EC79CE4925A64C4D00E7C58D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE4825A64C4D00E7C58D /* SceneDelegate.swift */; };
-		EC79CE4B25A64C4D00E7C58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE4A25A64C4D00E7C58D /* ViewController.swift */; };
+		EC79CE4B25A64C4D00E7C58D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE4A25A64C4D00E7C58D /* HomeViewController.swift */; };
 		EC79CE4E25A64C4D00E7C58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC79CE4C25A64C4D00E7C58D /* Main.storyboard */; };
 		EC79CE5025A64C4E00E7C58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC79CE4F25A64C4E00E7C58D /* Assets.xcassets */; };
 		EC79CE5325A64C4E00E7C58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC79CE5125A64C4E00E7C58D /* LaunchScreen.storyboard */; };
+		EC79CE5C25A64C6C00E7C58D /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE5B25A64C6C00E7C58D /* Joke.swift */; };
+		EC79CE6225A64DE400E7C58D /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE6125A64DE400E7C58D /* JokeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC79CE4325A64C4D00E7C58D /* Scherzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scherzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC79CE4625A64C4D00E7C58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC79CE4825A64C4D00E7C58D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC79CE4A25A64C4D00E7C58D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC79CE4A25A64C4D00E7C58D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EC79CE4D25A64C4D00E7C58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC79CE4F25A64C4E00E7C58D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC79CE5225A64C4E00E7C58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC79CE5425A64C4E00E7C58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC79CE5B25A64C6C00E7C58D /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		EC79CE6125A64DE400E7C58D /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				EC79CE4625A64C4D00E7C58D /* AppDelegate.swift */,
 				EC79CE4825A64C4D00E7C58D /* SceneDelegate.swift */,
-				EC79CE4A25A64C4D00E7C58D /* ViewController.swift */,
 				EC79CE4C25A64C4D00E7C58D /* Main.storyboard */,
+				EC79CE4A25A64C4D00E7C58D /* HomeViewController.swift */,
+				EC79CE6125A64DE400E7C58D /* JokeService.swift */,
+				EC79CE5B25A64C6C00E7C58D /* Joke.swift */,
 				EC79CE4F25A64C4E00E7C58D /* Assets.xcassets */,
 				EC79CE5125A64C4E00E7C58D /* LaunchScreen.storyboard */,
 				EC79CE5425A64C4E00E7C58D /* Info.plist */,
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC79CE4B25A64C4D00E7C58D /* ViewController.swift in Sources */,
+				EC79CE5C25A64C6C00E7C58D /* Joke.swift in Sources */,
+				EC79CE4B25A64C4D00E7C58D /* HomeViewController.swift in Sources */,
 				EC79CE4725A64C4D00E7C58D /* AppDelegate.swift in Sources */,
+				EC79CE6225A64DE400E7C58D /* JokeService.swift in Sources */,
 				EC79CE4925A64C4D00E7C58D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
