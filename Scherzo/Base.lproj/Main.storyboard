@@ -87,6 +87,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addToBookMarks" destination="udo-gf-cSM" id="5iN-df-uRq"/>
+                        <outlet property="getJoke" destination="eNQ-We-wzg" id="hsL-ZY-rSm"/>
                         <outlet property="punchLine" destination="0Vu-nb-9MB" id="HeX-Ol-QbO"/>
                         <outlet property="setupLine" destination="tho-WP-37s" id="hzc-yh-S0g"/>
                     </connections>

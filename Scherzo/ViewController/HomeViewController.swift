@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var setupLine: UILabel!
     @IBOutlet weak var punchLine: UILabel!
     @IBOutlet weak var addToBookMarks: UIButton!
+    @IBOutlet weak var getJoke: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ final class HomeViewController: UIViewController {
         self.setupLine.text = ""
         self.punchLine.text = ""
         addToBookMarks.isHidden = true
+        getJoke.layer.cornerRadius = getJoke.layer.frame.height / 3
         
     }
 
