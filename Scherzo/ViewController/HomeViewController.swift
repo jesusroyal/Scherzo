@@ -9,55 +9,33 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
-    private let service = JokeService()
-    private var isLoading = false
-
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var setupLine: UILabel!
     @IBOutlet weak var punchLine: UILabel!
     @IBOutlet weak var addToBookMarks: UIButton!
     @IBOutlet weak var getJoke: UIButton!
     
+    // MARK: - Private Properties
+    
+    private let service = JokeService()
+    private var isLoading = false
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
-
+    
+    // MARK: - Private Methods
+    
     private func setupView() {
         self.setupLine.text = ""
         self.punchLine.text = ""
         addToBookMarks.isHidden = true
         getJoke.layer.cornerRadius = getJoke.layer.frame.height / 3
         
-    }
-
-    @IBAction func jokeDidTap(_ sender: UIButton) {
-        showLoading()
-        service.getJoke { (joke) in
-            guard let joke = joke else {
-                DispatchQueue.main.async {
-                    self.showError()
-                }
-                return
-            }
-            DispatchQueue.main.async {
-                self.setupLine.text = joke.setup
-                self.punchLine.text = joke.punchline
-                self.addToBookMarks.isHidden = false
-                self.hideLoading()
-            }
-        }
-    }
-    @IBAction func addToBookmarksDidTap(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Save to Bookmarks?", message: "Do you want to save this joke to Bookmarks?", preferredStyle: .alert)
-        alert.addTextField() {textField in
-            textField.text = "Title"
-        }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _  in
-            self.saveJoke(title: alert.textFields![0].text ?? "No title")
-        }))
-        self.present(alert, animated: true, completion: nil)
-
     }
     
     private func saveJoke(title: String) {
@@ -70,8 +48,7 @@ final class HomeViewController: UIViewController {
                 delegate.saveContext()
     }
     
-
-    private func showLoading() {
+    private func presentLoadingAlert() {
         let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
 
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
@@ -84,13 +61,13 @@ final class HomeViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func hideLoading() {
+    private func dismissLoadingAlert() {
         dismiss(animated: true) {
             self.isLoading = false
         }
     }
 
-    private func showError() {
+    private func presentErrorAlert() {
         let alert = UIAlertController(title: "Error", message: "Can not connect to server", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 
@@ -101,6 +78,46 @@ final class HomeViewController: UIViewController {
         } else {
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    private func presentSaveToBookmarksAlert(){
+        let alert = UIAlertController(title: "Save to Bookmarks?", message: "Do you want to save this joke to Bookmarks?", preferredStyle: .alert)
+        alert.addTextField() {textField in
+            textField.text = "Title"
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _  in
+            self.saveJoke(title: alert.textFields![0].text ?? "No title")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func setJoke(_ joke: ApiJoke){
+        setupLine.text = joke.setup
+        punchLine.text = joke.punchline
+        addToBookMarks.isHidden = false
+        dismissLoadingAlert()
+    }
+    
+    // MARK: - IBActions
+
+    @IBAction func jokeDidTap(_ sender: UIButton) {
+        presentLoadingAlert()
+        service.getJoke { (joke) in
+            guard let joke = joke else {
+                DispatchQueue.main.async {
+                    self.presentErrorAlert()
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                self.setJoke(joke)
+            }
+        }
+    }
+    
+    @IBAction func addToBookmarksDidTap(_ sender: UIButton) {
+        presentSaveToBookmarksAlert()
     }
 }
 
