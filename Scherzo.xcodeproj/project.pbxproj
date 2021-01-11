@@ -16,6 +16,7 @@
 		EC79CE5C25A64C6C00E7C58D /* ApiJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE5B25A64C6C00E7C58D /* ApiJoke.swift */; };
 		EC79CE6225A64DE400E7C58D /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE6125A64DE400E7C58D /* JokeService.swift */; };
 		EC9082E425A798A500C7DE97 /* BookMarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */; };
+		ECB75D3425ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECB75D3225ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EC79CE5B25A64C6C00E7C58D /* ApiJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiJoke.swift; sourceTree = "<group>"; };
 		EC79CE6125A64DE400E7C58D /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
 		EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkTableViewController.swift; sourceTree = "<group>"; };
+		ECB75D3325ACBA4E006DCD99 /* JokeDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JokeDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,9 @@
 				EC79CE4825A64C4D00E7C58D /* SceneDelegate.swift */,
 				EC79CE4C25A64C4D00E7C58D /* Main.storyboard */,
 				ECB75D2725ACB988006DCD99 /* ViewController */,
-				EC79CE6125A64DE400E7C58D /* JokeService.swift */,
 				ECB75D2525ACB980006DCD99 /* Model */,
+				EC79CE6125A64DE400E7C58D /* JokeService.swift */,
+				ECB75D3225ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld */,
 				EC79CE4F25A64C4E00E7C58D /* Assets.xcassets */,
 				EC79CE5125A64C4E00E7C58D /* LaunchScreen.storyboard */,
 				EC79CE5425A64C4E00E7C58D /* Info.plist */,
@@ -168,6 +171,7 @@
 				EC79CE4725A64C4D00E7C58D /* AppDelegate.swift in Sources */,
 				EC79CE6225A64DE400E7C58D /* JokeService.swift in Sources */,
 				EC79CE4925A64C4D00E7C58D /* SceneDelegate.swift in Sources */,
+				ECB75D3425ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +373,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ECB75D3225ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ECB75D3325ACBA4E006DCD99 /* JokeDataModel.xcdatamodel */,
+			);
+			currentVersion = ECB75D3325ACBA4E006DCD99 /* JokeDataModel.xcdatamodel */;
+			path = JokeDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EC79CE3B25A64C4D00E7C58D /* Project object */;
 }
