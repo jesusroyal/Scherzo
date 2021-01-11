@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,13 +30,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tho-WP-37s">
-                                <rect key="frame" x="15" y="214" width="384" height="218"/>
+                                <rect key="frame" x="15" y="258" width="384" height="196"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scherzo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yS-Nh-nHF">
-                                <rect key="frame" x="50" y="94" width="314" height="100"/>
+                                <rect key="frame" x="50" y="138" width="314" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6yS-Nh-nHF" secondAttribute="height" multiplier="16:9" constant="136.22222222222223" id="2x6-wq-Fp0"/>
                                 </constraints>
@@ -46,22 +45,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Punch line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vu-nb-9MB">
-                                <rect key="frame" x="15" y="442" width="384" height="218"/>
+                                <rect key="frame" x="15" y="464" width="384" height="196"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90e-f5-rie">
-                                <rect key="frame" x="329" y="78" width="65" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="link.icloud" catalog="system" symbolScale="large"/>
-                                </state>
-                                <connections>
-                                    <segue destination="c3B-DM-FJM" kind="show" id="Dgn-76-bQr"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udo-gf-cSM">
                                 <rect key="frame" x="50" y="710" width="314" height="31"/>
                                 <state key="normal" title="Add to Bookmarks"/>
@@ -90,8 +78,13 @@
                             <constraint firstItem="eNQ-We-wzg" firstAttribute="top" secondItem="udo-gf-cSM" secondAttribute="bottom" constant="8" symbolic="YES" id="sFb-Z1-71m"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BTp-af-0Hb"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="BTp-af-0Hb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="bXW-ff-arg">
+                            <connections>
+                                <segue destination="xpd-5s-VHC" kind="show" id="Zhg-uV-4lZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addToBookMarks" destination="udo-gf-cSM" id="5iN-df-uRq"/>
                         <outlet property="punchLine" destination="0Vu-nb-9MB" id="HeX-Ol-QbO"/>
@@ -103,33 +96,33 @@
             <point key="canvasLocation" x="928.98550724637687" y="76.339285714285708"/>
         </scene>
         <!--Book Mark Table View Controller-->
-        <scene sceneID="s7q-5a-TsN">
+        <scene sceneID="zKC-RM-roe">
             <objects>
-                <tableViewController id="c3B-DM-FJM" customClass="BookMarkTableViewController" customModule="Scherzo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PUm-x5-QHg">
+                <tableViewController id="xpd-5s-VHC" customClass="BookMarkTableViewController" customModule="Scherzo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="udL-ll-hMp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookMarkCell" id="cyl-9g-Ql9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookMarkCell" id="d1V-Mh-enP">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cyl-9g-Ql9" id="2FQ-d6-Aaq">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d1V-Mh-enP" id="xJd-3O-DvY">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="c3B-DM-FJM" id="rKd-UI-Tb4"/>
-                            <outlet property="delegate" destination="c3B-DM-FJM" id="NLu-dT-ctc"/>
+                            <outlet property="dataSource" destination="xpd-5s-VHC" id="1Se-EV-8pU"/>
+                            <outlet property="delegate" destination="xpd-5s-VHC" id="DR9-mx-9Sk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="IaZ-Wa-ctM"/>
+                    <navigationItem key="navigationItem" id="CXk-Xh-CA4"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pSe-Pv-ko4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lya-3a-FGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1704" y="83"/>
+            <point key="canvasLocation" x="1736" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PES-O0-QZq">
@@ -151,7 +144,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="link.icloud" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

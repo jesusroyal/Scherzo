@@ -11,13 +11,13 @@ final class JokeService {
     private let url = URL(string: "https://official-joke-api.appspot.com/random_joke")!
     private let session = URLSession(configuration: .default)
 
-    func getJoke(completionHandler: @escaping (Joke?) -> Void) {
+    func getJoke(completionHandler: @escaping (ApiJoke?) -> Void) {
         let task = session.dataTask(with: url) { (data, resp, err) in
             guard let data = data else {
                 completionHandler(nil)
                 return
             }
-            if let joke = try? JSONDecoder().decode(Joke.self, from: data) {
+            if let joke = try? JSONDecoder().decode(ApiJoke.self, from: data) {
                 completionHandler(joke) } else {
                 completionHandler(nil)
             }
