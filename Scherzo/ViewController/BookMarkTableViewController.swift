@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import CoreData
 
 class BookMarkTableViewController: UITableViewController {
     
     private let reuseIdentifier = "bookMarkCell"
+    var array = [Joke]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let fetchRequest: NSFetchRequest<Joke> = Joke.fetchRequest()
+        guard let array = try? delegate.persistentContainer.viewContext.fetch(fetchRequest) else {return }
+        self.array = array
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,14 +35,14 @@ class BookMarkTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return array.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
 
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = array[indexPath.row].setup
 
         return cell
     }

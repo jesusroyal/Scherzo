@@ -47,6 +47,29 @@ final class HomeViewController: UIViewController {
             }
         }
     }
+    @IBAction func addToBookmarksDidTap(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Save to Bookmarks?", message: "Do you want to save this joke to Bookmarks?", preferredStyle: .alert)
+        alert.addTextField() {textField in
+            textField.text = "Title"
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _  in
+            self.saveJoke(title: alert.textFields![0].text ?? "No title")
+        }))
+        self.present(alert, animated: true, completion: nil)
+
+    }
+    
+    private func saveJoke(title: String) {
+                let delegate = UIApplication.shared.delegate as! AppDelegate
+                let joke = Joke(context: delegate.persistentContainer.viewContext)
+                joke.id = 12
+                joke.setup = setupLine.text
+                joke.punchline = punchLine.text
+                joke.title = title
+                delegate.saveContext()
+    }
+    
 
     private func showLoading() {
         let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)

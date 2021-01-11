@@ -17,6 +17,8 @@
 		EC79CE6225A64DE400E7C58D /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE6125A64DE400E7C58D /* JokeService.swift */; };
 		EC9082E425A798A500C7DE97 /* BookMarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */; };
 		ECB75D3425ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECB75D3225ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld */; };
+		ECC06C3525ACC1CC00152A5B /* Joke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3325ACC1CC00152A5B /* Joke+CoreDataClass.swift */; };
+		ECC06C3625ACC1CC00152A5B /* Joke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3425ACC1CC00152A5B /* Joke+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		EC79CE6125A64DE400E7C58D /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
 		EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkTableViewController.swift; sourceTree = "<group>"; };
 		ECB75D3325ACBA4E006DCD99 /* JokeDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JokeDataModel.xcdatamodel; sourceTree = "<group>"; };
+		ECC06C3325ACC1CC00152A5B /* Joke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ECC06C3425ACC1CC00152A5B /* Joke+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		ECB75D2525ACB980006DCD99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ECC06C3325ACC1CC00152A5B /* Joke+CoreDataClass.swift */,
+				ECC06C3425ACC1CC00152A5B /* Joke+CoreDataProperties.swift */,
 				EC79CE5B25A64C6C00E7C58D /* ApiJoke.swift */,
 			);
 			path = Model;
@@ -165,11 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC06C3525ACC1CC00152A5B /* Joke+CoreDataClass.swift in Sources */,
 				EC79CE5C25A64C6C00E7C58D /* ApiJoke.swift in Sources */,
 				EC9082E425A798A500C7DE97 /* BookMarkTableViewController.swift in Sources */,
 				EC79CE4B25A64C4D00E7C58D /* HomeViewController.swift in Sources */,
 				EC79CE4725A64C4D00E7C58D /* AppDelegate.swift in Sources */,
 				EC79CE6225A64DE400E7C58D /* JokeService.swift in Sources */,
+				ECC06C3625ACC1CC00152A5B /* Joke+CoreDataProperties.swift in Sources */,
 				EC79CE4925A64C4D00E7C58D /* SceneDelegate.swift in Sources */,
 				ECB75D3425ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld in Sources */,
 			);

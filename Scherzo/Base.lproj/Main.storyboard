@@ -53,6 +53,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udo-gf-cSM">
                                 <rect key="frame" x="50" y="710" width="314" height="31"/>
                                 <state key="normal" title="Add to Bookmarks"/>
+                                <connections>
+                                    <action selector="addToBookmarksDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iP-VI-Gg1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
