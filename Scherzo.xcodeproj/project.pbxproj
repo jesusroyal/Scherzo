@@ -19,6 +19,7 @@
 		ECB75D3425ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECB75D3225ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld */; };
 		ECC06C3525ACC1CC00152A5B /* Joke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3325ACC1CC00152A5B /* Joke+CoreDataClass.swift */; };
 		ECC06C3625ACC1CC00152A5B /* Joke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3425ACC1CC00152A5B /* Joke+CoreDataProperties.swift */; };
+		ECC06C3A25ACC51900152A5B /* JokeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3925ACC51900152A5B /* JokeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		ECB75D3325ACBA4E006DCD99 /* JokeDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JokeDataModel.xcdatamodel; sourceTree = "<group>"; };
 		ECC06C3325ACC1CC00152A5B /* Joke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ECC06C3425ACC1CC00152A5B /* Joke+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ECC06C3925ACC51900152A5B /* JokeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */,
 				EC79CE4A25A64C4D00E7C58D /* HomeViewController.swift */,
+				ECC06C3925ACC51900152A5B /* JokeDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				EC79CE4B25A64C4D00E7C58D /* HomeViewController.swift in Sources */,
 				EC79CE4725A64C4D00E7C58D /* AppDelegate.swift in Sources */,
 				EC79CE6225A64DE400E7C58D /* JokeService.swift in Sources */,
+				ECC06C3A25ACC51900152A5B /* JokeDetailViewController.swift in Sources */,
 				ECC06C3625ACC1CC00152A5B /* Joke+CoreDataProperties.swift in Sources */,
 				EC79CE4925A64C4D00E7C58D /* SceneDelegate.swift in Sources */,
 				ECB75D3425ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld in Sources */,

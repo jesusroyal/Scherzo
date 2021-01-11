@@ -47,6 +47,11 @@ class BookMarkTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showJoke", sender: array[indexPath.row])
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -83,14 +88,18 @@ class BookMarkTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "showJoke"){
+            guard let destinationVC = segue.destination as? JokeDetailViewController, let joke = sender as? Joke else {
+                return
+            }
+            destinationVC.joke = joke
+        }
     }
-    */
+    
 
 }

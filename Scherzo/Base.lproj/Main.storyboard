@@ -123,10 +123,49 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="CXk-Xh-CA4"/>
+                    <connections>
+                        <segue destination="TQw-Ah-Tvm" kind="show" identifier="showJoke" id="DbX-am-CNv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lya-3a-FGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1736" y="76"/>
+        </scene>
+        <!--Joke Detail View Controller-->
+        <scene sceneID="UOU-4a-p3h">
+            <objects>
+                <viewController id="TQw-Ah-Tvm" customClass="JokeDetailViewController" customModule="Scherzo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ac-cY-7R3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setup Line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glg-s7-D5f">
+                                <rect key="frame" x="69" y="247" width="286" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Punch Line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mao-gI-c7k">
+                                <rect key="frame" x="69" y="401" width="286" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zjh-9X-454"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QbX-Ku-XeC"/>
+                    <connections>
+                        <outlet property="punchLine" destination="mao-gI-c7k" id="bEJ-mo-bS7"/>
+                        <outlet property="setupLine" destination="Glg-s7-D5f" id="zJF-fp-qr4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icj-rq-12T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2611.594202898551" y="73.660714285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PES-O0-QZq">
