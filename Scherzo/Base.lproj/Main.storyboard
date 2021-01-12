@@ -139,16 +139,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setup Line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glg-s7-D5f">
-                                <rect key="frame" x="69" y="247" width="286" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glg-s7-D5f">
+                                <rect key="frame" x="15" y="138" width="384" height="327"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Punch Line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mao-gI-c7k">
-                                <rect key="frame" x="69" y="401" width="286" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Punch Line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mao-gI-c7k">
+                                <rect key="frame" x="15" y="485" width="384" height="327"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -156,6 +154,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zjh-9X-454"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Glg-s7-D5f" firstAttribute="leading" secondItem="zjh-9X-454" secondAttribute="leading" constant="15" id="8tt-ni-MyN"/>
+                            <constraint firstItem="Glg-s7-D5f" firstAttribute="top" secondItem="zjh-9X-454" secondAttribute="top" constant="50" id="JqW-ve-r1H"/>
+                            <constraint firstItem="mao-gI-c7k" firstAttribute="top" secondItem="Glg-s7-D5f" secondAttribute="bottom" constant="20" id="POz-Dc-jFF"/>
+                            <constraint firstItem="Glg-s7-D5f" firstAttribute="height" secondItem="mao-gI-c7k" secondAttribute="height" id="QVv-q0-Dc8"/>
+                            <constraint firstItem="zjh-9X-454" firstAttribute="trailing" secondItem="mao-gI-c7k" secondAttribute="trailing" constant="15" id="RCw-jd-5LY"/>
+                            <constraint firstItem="mao-gI-c7k" firstAttribute="leading" secondItem="zjh-9X-454" secondAttribute="leading" constant="15" id="guq-Lh-vcd"/>
+                            <constraint firstItem="zjh-9X-454" firstAttribute="bottom" secondItem="mao-gI-c7k" secondAttribute="bottom" constant="50" id="n5o-06-T7m"/>
+                            <constraint firstItem="zjh-9X-454" firstAttribute="trailing" secondItem="Glg-s7-D5f" secondAttribute="trailing" constant="15" id="tBs-K4-c8l"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QbX-Ku-XeC"/>
                     <connections>
