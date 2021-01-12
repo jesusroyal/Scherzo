@@ -10,92 +10,68 @@ import CoreData
 
 class BookMarkTableViewController: UITableViewController {
     
-    private let reuseIdentifier = "bookMarkCell"
-    var array = [Joke]()
-
+    // MARK: - Private Properties
+    
+    private let cellReuseIdentifier = "bookMarkCell"
+    
+    private var jokes = [Joke]()
+    
+    private var coreDataContext: NSManagedObjectContext {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        return delegate.persistentContainer.viewContext
+    }
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let delegate = UIApplication.shared.delegate as! AppDelegate
+        fetchJokes()
+        
+    }
+    
+    // MARK: - Private Methods
+    
+    private func fetchJokes(){
         let fetchRequest: NSFetchRequest<Joke> = Joke.fetchRequest()
-        guard let array = try? delegate.persistentContainer.viewContext.fetch(fetchRequest) else {return }
-        self.array = array
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        guard let array = try? coreDataContext.fetch(fetchRequest) else {return }
+        self.jokes = array
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return array.count
+        return jokes.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
 
-        cell.textLabel?.text = array[indexPath.row].title
+        cell.textLabel?.text = jokes[indexPath.row].title
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "showJoke", sender: array[indexPath.row])
+        performSegue(withIdentifier: "showJoke", sender: jokes[indexPath.row])
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let delegate = UIApplication.shared.delegate as! AppDelegate
-            let context = delegate.persistentContainer.viewContext
-            context.delete(array[indexPath.row])
-            array.remove(at: indexPath.row)
-            // Delete the row from the data source
+            coreDataContext.delete(jokes[indexPath.row])
+            jokes.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             
         }
     }
     
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showJoke"){
             guard let destinationVC = segue.destination as? JokeDetailViewController, let joke = sender as? Joke else {
@@ -104,6 +80,4 @@ class BookMarkTableViewController: UITableViewController {
             destinationVC.joke = joke
         }
     }
-    
-
 }
