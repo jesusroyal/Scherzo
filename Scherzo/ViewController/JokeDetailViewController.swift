@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JokeDetailViewController: UIViewController {
+final class JokeDetailViewController: UIViewController {
     
     // MARK: - IBOutlets
     

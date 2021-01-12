@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class BookMarkTableViewController: UITableViewController {
+final class BookMarkTableViewController: UITableViewController {
     
     // MARK: - Private Properties
     
