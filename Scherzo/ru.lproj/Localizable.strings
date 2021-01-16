@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Scherzo
+
+  Created by Mike Shevelinsky on 16.01.2021.
+  
+*/
+
+"ErrorLoading" = "Ошибка подключения";
+"Error" = "Ошибка";
+"Loading" = "Загрузка...";
+"SaveToBookmarks" = "Сохранить в закладки?";
+"SaveToBookmarksSub" = "Добавить эту Шутку в Ваши закладки?";
+"Title" = "Заголовок";
+"Cancel" = "Отмена";
+"Notitle" = "Без имени";
+

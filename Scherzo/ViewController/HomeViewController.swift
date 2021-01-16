@@ -49,7 +49,7 @@ final class HomeViewController: UIViewController {
     }
     
     private func presentLoadingAlert() {
-        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: "Loading".localized, preferredStyle: .alert)
 
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
@@ -68,7 +68,7 @@ final class HomeViewController: UIViewController {
     }
 
     private func presentErrorAlert() {
-        let alert = UIAlertController(title: "Error", message: "Can not connect to server", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error".localized, message: "ErrorLoading".localized, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 
         if isLoading {
@@ -81,13 +81,13 @@ final class HomeViewController: UIViewController {
     }
     
     private func presentSaveToBookmarksAlert(){
-        let alert = UIAlertController(title: "Save to Bookmarks?", message: "Do you want to save this joke to Bookmarks?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "SaveToBookmarks".localized, message: "SaveToBookmarksSub".localized, preferredStyle: .alert)
         alert.addTextField() {textField in
-            textField.text = "Title"
+            textField.text = "Title".localized
         }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _  in
-            self.saveJoke(title: alert.textFields![0].text ?? "No title")
+            self.saveJoke(title: alert.textFields![0].text ?? "Notitle".localized)
         }))
         self.present(alert, animated: true, completion: nil)
     }

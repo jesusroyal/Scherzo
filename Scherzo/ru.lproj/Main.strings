@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Punch line"; ObjectID = "0Vu-nb-9MB"; */
+"0Vu-nb-9MB.text" = "Punch line";
+
+/* Class = "UILabel"; text = "Scherzo"; ObjectID = "6yS-Nh-nHF"; */
+"6yS-Nh-nHF.text" = "Scherzo";
+
+/* Class = "UILabel"; text = "Setup Line"; ObjectID = "Glg-s7-D5f"; */
+"Glg-s7-D5f.text" = "Setup Line";
+
+/* Class = "UIButton"; normalTitle = "Get a Joke"; ObjectID = "eNQ-We-wzg"; */
+"eNQ-We-wzg.normalTitle" = "Загрузить шутку";
+
+/* Class = "UILabel"; text = "Punch Line"; ObjectID = "mao-gI-c7k"; */
+"mao-gI-c7k.text" = "Punch Line";
+
+/* Class = "UILabel"; text = "Setup Line"; ObjectID = "tho-WP-37s"; */
+"tho-WP-37s.text" = "Setup Line";
+
+/* Class = "UIButton"; normalTitle = "Add to Bookmarks"; ObjectID = "udo-gf-cSM"; */
+"udo-gf-cSM.normalTitle" = "Сохранить в закладках";

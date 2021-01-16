@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Scherzo
+
+  Created by Mike Shevelinsky on 16.01.2021.
+  
+*/
+
+"ErrorLoading" = "Can not connect to server";
+"Error" = "Error";
+"Loading" = "Please wait...";
+"SaveToBookmarks" = "Save to Bookmarks?";
+"SaveToBookmarksSub" = "Do you want to save this joke to Bookmarks?";
+"Title" = "Title";
+"Cancel" = "Cancel";
+"Notitle" = "No title";

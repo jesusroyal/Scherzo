@@ -15,6 +15,8 @@
 		EC79CE5325A64C4E00E7C58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC79CE5125A64C4E00E7C58D /* LaunchScreen.storyboard */; };
 		EC79CE5C25A64C6C00E7C58D /* ApiJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE5B25A64C6C00E7C58D /* ApiJoke.swift */; };
 		EC79CE6225A64DE400E7C58D /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE6125A64DE400E7C58D /* JokeService.swift */; };
+		EC79CE9A25B32B3F00A264D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC79CE9C25B32B3F00A264D9 /* Localizable.strings */; };
+		EC79CEA025B32C8800A264D9 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE9F25B32C8800A264D9 /* String+localized.swift */; };
 		EC9082E425A798A500C7DE97 /* BookMarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */; };
 		ECB75D3425ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECB75D3225ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld */; };
 		ECC06C3525ACC1CC00152A5B /* Joke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3325ACC1CC00152A5B /* Joke+CoreDataClass.swift */; };
@@ -33,6 +35,11 @@
 		EC79CE5425A64C4E00E7C58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC79CE5B25A64C6C00E7C58D /* ApiJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiJoke.swift; sourceTree = "<group>"; };
 		EC79CE6125A64DE400E7C58D /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
+		EC79CE9425B329EB00A264D9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		EC79CE9525B329EB00A264D9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EC79CE9B25B32B3F00A264D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC79CE9E25B32B4300A264D9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC79CE9F25B32C8800A264D9 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkTableViewController.swift; sourceTree = "<group>"; };
 		ECB75D3325ACBA4E006DCD99 /* JokeDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JokeDataModel.xcdatamodel; sourceTree = "<group>"; };
 		ECC06C3325ACC1CC00152A5B /* Joke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -70,9 +77,11 @@
 		EC79CE4525A64C4D00E7C58D /* Scherzo */ = {
 			isa = PBXGroup;
 			children = (
+				EC79CE9F25B32C8800A264D9 /* String+localized.swift */,
 				EC79CE4625A64C4D00E7C58D /* AppDelegate.swift */,
 				EC79CE4825A64C4D00E7C58D /* SceneDelegate.swift */,
 				EC79CE4C25A64C4D00E7C58D /* Main.storyboard */,
+				EC79CE9C25B32B3F00A264D9 /* Localizable.strings */,
 				ECB75D2725ACB988006DCD99 /* ViewController */,
 				ECB75D2525ACB980006DCD99 /* Model */,
 				EC79CE6125A64DE400E7C58D /* JokeService.swift */,
@@ -145,6 +154,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = EC79CE3A25A64C4D00E7C58D;
 			productRefGroup = EC79CE4425A64C4D00E7C58D /* Products */;
@@ -162,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC79CE5325A64C4E00E7C58D /* LaunchScreen.storyboard in Resources */,
+				EC79CE9A25B32B3F00A264D9 /* Localizable.strings in Resources */,
 				EC79CE5025A64C4E00E7C58D /* Assets.xcassets in Resources */,
 				EC79CE4E25A64C4D00E7C58D /* Main.storyboard in Resources */,
 			);
@@ -176,6 +187,7 @@
 			files = (
 				ECC06C3525ACC1CC00152A5B /* Joke+CoreDataClass.swift in Sources */,
 				EC79CE5C25A64C6C00E7C58D /* ApiJoke.swift in Sources */,
+				EC79CEA025B32C8800A264D9 /* String+localized.swift in Sources */,
 				EC9082E425A798A500C7DE97 /* BookMarkTableViewController.swift in Sources */,
 				EC79CE4B25A64C4D00E7C58D /* HomeViewController.swift in Sources */,
 				EC79CE4725A64C4D00E7C58D /* AppDelegate.swift in Sources */,
@@ -194,6 +206,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EC79CE4D25A64C4D00E7C58D /* Base */,
+				EC79CE9425B329EB00A264D9 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -202,8 +215,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				EC79CE5225A64C4E00E7C58D /* Base */,
+				EC79CE9525B329EB00A264D9 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EC79CE9C25B32B3F00A264D9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC79CE9B25B32B3F00A264D9 /* en */,
+				EC79CE9E25B32B4300A264D9 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -213,6 +236,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -274,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
