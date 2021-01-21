@@ -51,6 +51,7 @@ final class BookMarkTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
 
         cell.textLabel?.text = jokes[indexPath.row].title
+        cell.detailTextLabel?.text = jokes[indexPath.row].setup
 
         return cell
     }
