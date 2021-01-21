@@ -43,6 +43,7 @@ final class HomeViewController: UIViewController {
         self.punchLine.text = ""
         addToBookMarks.isHidden = true
         getJoke.layer.cornerRadius = getJoke.layer.frame.height / 3
+        getJoke.backgroundColor = Colors.pink
         
         self.view.layer.insertSublayer(gradient, at: 0)
         
@@ -52,6 +53,7 @@ final class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = Colors.pink
     }
     
     private func saveJoke(title: String) {
