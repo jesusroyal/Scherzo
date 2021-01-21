@@ -20,12 +20,20 @@ final class HomeViewController: UIViewController {
     
     private let service = JokeService()
     private var isLoading = false
+    private var gradient: CALayer {
+        let gradient = CAGradientLayer()
+        gradient.colors = [Colors.blue.cgColor, Colors.lightBlue.cgColor]
+        gradient.locations = [0.0, 1.0]
+            gradient.frame = self.view.bounds
+        return gradient
+    }
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupNavigationBar()
     }
     
     // MARK: - Private Methods
@@ -36,6 +44,14 @@ final class HomeViewController: UIViewController {
         addToBookMarks.isHidden = true
         getJoke.layer.cornerRadius = getJoke.layer.frame.height / 3
         
+        self.view.layer.insertSublayer(gradient, at: 0)
+        
+    }
+    
+    private func setupNavigationBar(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     private func saveJoke(title: String) {
