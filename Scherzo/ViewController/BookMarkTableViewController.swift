@@ -21,12 +21,24 @@ final class BookMarkTableViewController: UITableViewController {
         return delegate.persistentContainer.viewContext
     }
     
+    private var gradient: CALayer {
+        let gradientBackgroundColors = [Colors.green.cgColor, Colors.purple.cgColor]
+        let gradientLocations:[NSNumber] = [0.0,1.0]
+        let gradient = CAGradientLayer()
+        gradient.colors = gradientBackgroundColors
+        gradient.locations = gradientLocations
+        gradient.frame = self.tableView.bounds
+        return gradient
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchJokes()
-        self.title = "BookMarkTitle".localized
+        
+        setupView()
+        setupNevigationBar()
     }
     
     // MARK: - Private Methods
@@ -35,6 +47,21 @@ final class BookMarkTableViewController: UITableViewController {
         let fetchRequest: NSFetchRequest<Joke> = Joke.fetchRequest()
         guard let array = try? coreDataContext.fetch(fetchRequest) else {return }
         self.jokes = array
+    }
+    
+    private func setupView(){
+        self.title = "BookMarkTitle".localized
+        
+        let backgroundView = UIView(frame: self.tableView.bounds)
+        backgroundView.layer.insertSublayer(gradient, at: 0)
+        self.tableView.backgroundView = backgroundView
+    }
+    
+    private func setupNevigationBar(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = Colors.pink
     }
 
     // MARK: - Table view data source
@@ -54,6 +81,10 @@ final class BookMarkTableViewController: UITableViewController {
         cell.detailTextLabel?.text = jokes[indexPath.row].setup
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
