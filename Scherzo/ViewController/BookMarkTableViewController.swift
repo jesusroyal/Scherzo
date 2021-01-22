@@ -26,7 +26,7 @@ final class BookMarkTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchJokes()
-        
+        self.title = "BookMarkTitle".localized
     }
     
     // MARK: - Private Methods
