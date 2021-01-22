@@ -30,29 +30,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tho-WP-37s">
-                                <rect key="frame" x="15" y="258" width="384" height="196"/>
+                                <rect key="frame" x="15" y="188" width="384" height="231"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scherzo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yS-Nh-nHF">
-                                <rect key="frame" x="50" y="138" width="314" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="6yS-Nh-nHF" secondAttribute="height" multiplier="16:9" constant="136.22222222222223" id="2x6-wq-Fp0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Punch line" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vu-nb-9MB">
-                                <rect key="frame" x="15" y="464" width="384" height="196"/>
+                                <rect key="frame" x="15" y="429" width="384" height="231"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udo-gf-cSM">
                                 <rect key="frame" x="50" y="710" width="314" height="31"/>
-                                <state key="normal" title="Add to Bookmarks"/>
+                                <state key="normal" title="Add to Bookmarks">
+                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                </state>
                                 <connections>
                                     <action selector="addToBookmarksDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iP-VI-Gg1"/>
                                 </connections>
@@ -62,7 +55,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="udo-gf-cSM" firstAttribute="height" secondItem="eNQ-We-wzg" secondAttribute="height" multiplier="0.5" id="7Xs-GI-LGW"/>
-                            <constraint firstItem="6yS-Nh-nHF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="9ce-ja-4u9"/>
+                            <constraint firstItem="tho-WP-37s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="BLn-Yz-1xo"/>
                             <constraint firstItem="0Vu-nb-9MB" firstAttribute="top" secondItem="tho-WP-37s" secondAttribute="bottom" constant="10" id="DJm-ku-uhu"/>
                             <constraint firstItem="udo-gf-cSM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="HmF-vU-ifz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tho-WP-37s" secondAttribute="trailing" constant="15" id="Ony-Sg-bWz"/>
@@ -70,13 +63,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Vu-nb-9MB" secondAttribute="trailing" constant="15" id="WOV-lE-oJJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eNQ-We-wzg" secondAttribute="bottom" constant="50" id="XWe-BJ-wTI"/>
                             <constraint firstItem="tho-WP-37s" firstAttribute="height" secondItem="0Vu-nb-9MB" secondAttribute="height" id="ZMc-na-sGG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6yS-Nh-nHF" secondAttribute="trailing" constant="50" id="bWh-WK-job"/>
                             <constraint firstItem="tho-WP-37s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="cQl-Ar-fB9"/>
                             <constraint firstItem="0Vu-nb-9MB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="edx-fq-OSJ"/>
                             <constraint firstItem="udo-gf-cSM" firstAttribute="top" secondItem="0Vu-nb-9MB" secondAttribute="bottom" constant="50" id="hQa-Zt-jzd"/>
-                            <constraint firstItem="tho-WP-37s" firstAttribute="top" secondItem="6yS-Nh-nHF" secondAttribute="bottom" constant="20" id="iSz-hF-Ob5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="udo-gf-cSM" secondAttribute="trailing" constant="50" id="jC0-iL-AdG"/>
-                            <constraint firstItem="6yS-Nh-nHF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="nxp-c6-Yz8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eNQ-We-wzg" secondAttribute="trailing" constant="50" id="s1A-5o-c0i"/>
                             <constraint firstItem="eNQ-We-wzg" firstAttribute="top" secondItem="udo-gf-cSM" secondAttribute="bottom" constant="8" symbolic="YES" id="sFb-Z1-71m"/>
                         </constraints>
@@ -213,6 +203,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
