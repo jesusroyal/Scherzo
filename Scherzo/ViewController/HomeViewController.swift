@@ -45,6 +45,8 @@ final class HomeViewController: UIViewController {
         getJoke.layer.cornerRadius = getJoke.layer.frame.height / 3
         getJoke.backgroundColor = Colors.pink
         
+        self.title = "Scherzo"
+        
         self.view.layer.insertSublayer(gradient, at: 0)
         
     }
@@ -54,6 +56,7 @@ final class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = Colors.pink
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func saveJoke(title: String) {
