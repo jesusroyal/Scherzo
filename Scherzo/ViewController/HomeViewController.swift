@@ -33,7 +33,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        setupNavigationBar()
+        self.setNavigationBar()
     }
     
     // MARK: - Private Methods
@@ -49,14 +49,6 @@ final class HomeViewController: UIViewController {
         
         self.view.layer.insertSublayer(gradient, at: 0)
         
-    }
-    
-    private func setupNavigationBar(){
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.tintColor = Colors.pink
-        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func saveJoke(title: String) {

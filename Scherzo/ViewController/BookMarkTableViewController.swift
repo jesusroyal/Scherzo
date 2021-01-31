@@ -38,7 +38,7 @@ final class BookMarkTableViewController: UITableViewController {
         fetchJokes()
         
         setupView()
-        setupNevigationBar()
+        self.setNavigationBar()
     }
     
     // MARK: - Private Methods
@@ -55,13 +55,6 @@ final class BookMarkTableViewController: UITableViewController {
         let backgroundView = UIView(frame: self.tableView.bounds)
         backgroundView.layer.insertSublayer(gradient, at: 0)
         self.tableView.backgroundView = backgroundView
-    }
-    
-    private func setupNevigationBar(){
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.tintColor = Colors.pink
     }
 
     // MARK: - Table view data source

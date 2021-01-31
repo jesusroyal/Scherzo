@@ -19,6 +19,7 @@
 		EC79CEA025B32C8800A264D9 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE9F25B32C8800A264D9 /* String+localized.swift */; };
 		EC8B051A25B9FF0400725906 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8B051925B9FF0400725906 /* Colors.swift */; };
 		EC9082E425A798A500C7DE97 /* BookMarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */; };
+		EC9578E725C71BEE00756BAF /* UIViewController+SetNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9578E625C71BEE00756BAF /* UIViewController+SetNavigationBar.swift */; };
 		ECB75D3425ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECB75D3225ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld */; };
 		ECC06C3525ACC1CC00152A5B /* Joke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3325ACC1CC00152A5B /* Joke+CoreDataClass.swift */; };
 		ECC06C3625ACC1CC00152A5B /* Joke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3425ACC1CC00152A5B /* Joke+CoreDataProperties.swift */; };
@@ -43,6 +44,7 @@
 		EC79CE9F25B32C8800A264D9 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		EC8B051925B9FF0400725906 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkTableViewController.swift; sourceTree = "<group>"; };
+		EC9578E625C71BEE00756BAF /* UIViewController+SetNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SetNavigationBar.swift"; sourceTree = "<group>"; };
 		ECB75D3325ACBA4E006DCD99 /* JokeDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JokeDataModel.xcdatamodel; sourceTree = "<group>"; };
 		ECC06C3325ACC1CC00152A5B /* Joke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ECC06C3425ACC1CC00152A5B /* Joke+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -82,7 +84,7 @@
 				EC79CE9F25B32C8800A264D9 /* String+localized.swift */,
 				EC79CE4625A64C4D00E7C58D /* AppDelegate.swift */,
 				EC79CE4825A64C4D00E7C58D /* SceneDelegate.swift */,
-				EC8B051925B9FF0400725906 /* Colors.swift */,
+				EC9578E525C71BC700756BAF /* Utils */,
 				EC79CE4C25A64C4D00E7C58D /* Main.storyboard */,
 				EC79CE9C25B32B3F00A264D9 /* Localizable.strings */,
 				ECB75D2725ACB988006DCD99 /* ViewController */,
@@ -94,6 +96,15 @@
 				EC79CE5425A64C4E00E7C58D /* Info.plist */,
 			);
 			path = Scherzo;
+			sourceTree = "<group>";
+		};
+		EC9578E525C71BC700756BAF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EC8B051925B9FF0400725906 /* Colors.swift */,
+				EC9578E625C71BEE00756BAF /* UIViewController+SetNavigationBar.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		ECB75D2525ACB980006DCD99 /* Model */ = {
@@ -190,6 +201,7 @@
 			files = (
 				ECC06C3525ACC1CC00152A5B /* Joke+CoreDataClass.swift in Sources */,
 				EC8B051A25B9FF0400725906 /* Colors.swift in Sources */,
+				EC9578E725C71BEE00756BAF /* UIViewController+SetNavigationBar.swift in Sources */,
 				EC79CE5C25A64C6C00E7C58D /* ApiJoke.swift in Sources */,
 				EC79CEA025B32C8800A264D9 /* String+localized.swift in Sources */,
 				EC9082E425A798A500C7DE97 /* BookMarkTableViewController.swift in Sources */,
