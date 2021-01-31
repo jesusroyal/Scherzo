@@ -81,12 +81,10 @@
 		EC79CE4525A64C4D00E7C58D /* Scherzo */ = {
 			isa = PBXGroup;
 			children = (
-				EC79CE9F25B32C8800A264D9 /* String+localized.swift */,
 				EC79CE4625A64C4D00E7C58D /* AppDelegate.swift */,
 				EC79CE4825A64C4D00E7C58D /* SceneDelegate.swift */,
 				EC9578E525C71BC700756BAF /* Utils */,
 				EC79CE4C25A64C4D00E7C58D /* Main.storyboard */,
-				EC79CE9C25B32B3F00A264D9 /* Localizable.strings */,
 				ECB75D2725ACB988006DCD99 /* ViewController */,
 				ECB75D2525ACB980006DCD99 /* Model */,
 				EC79CE6125A64DE400E7C58D /* JokeService.swift */,
@@ -101,6 +99,8 @@
 		EC9578E525C71BC700756BAF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EC79CE9C25B32B3F00A264D9 /* Localizable.strings */,
+				EC79CE9F25B32C8800A264D9 /* String+localized.swift */,
 				EC8B051925B9FF0400725906 /* Colors.swift */,
 				EC9578E625C71BEE00756BAF /* UIViewController+SetNavigationBar.swift */,
 			);
