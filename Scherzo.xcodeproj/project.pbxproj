@@ -18,6 +18,9 @@
 		EC79CE9A25B32B3F00A264D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC79CE9C25B32B3F00A264D9 /* Localizable.strings */; };
 		EC79CEA025B32C8800A264D9 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE9F25B32C8800A264D9 /* String+localized.swift */; };
 		EC8B051A25B9FF0400725906 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8B051925B9FF0400725906 /* Colors.swift */; };
+		EC8E0FBB25C9898800C9176B /* ScherzoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8E0FBA25C9898800C9176B /* ScherzoTests.swift */; };
+		EC8E0FC425C98A0600C9176B /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE6125A64DE400E7C58D /* JokeService.swift */; };
+		EC8E0FC725C98AE700C9176B /* ApiJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79CE5B25A64C6C00E7C58D /* ApiJoke.swift */; };
 		EC9082E425A798A500C7DE97 /* BookMarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */; };
 		EC9578E725C71BEE00756BAF /* UIViewController+SetNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9578E625C71BEE00756BAF /* UIViewController+SetNavigationBar.swift */; };
 		ECB75D3425ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECB75D3225ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld */; };
@@ -25,6 +28,16 @@
 		ECC06C3625ACC1CC00152A5B /* Joke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3425ACC1CC00152A5B /* Joke+CoreDataProperties.swift */; };
 		ECC06C3A25ACC51900152A5B /* JokeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC06C3925ACC51900152A5B /* JokeDetailViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC8E0FBD25C9898800C9176B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC79CE3B25A64C4D00E7C58D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC79CE4225A64C4D00E7C58D;
+			remoteInfo = Scherzo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EC79CE4325A64C4D00E7C58D /* Scherzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scherzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +56,9 @@
 		EC79CE9E25B32B4300A264D9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC79CE9F25B32C8800A264D9 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		EC8B051925B9FF0400725906 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		EC8E0FB825C9898800C9176B /* ScherzoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScherzoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8E0FBA25C9898800C9176B /* ScherzoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScherzoTests.swift; sourceTree = "<group>"; };
+		EC8E0FBC25C9898800C9176B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC9082E325A798A500C7DE97 /* BookMarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkTableViewController.swift; sourceTree = "<group>"; };
 		EC9578E625C71BEE00756BAF /* UIViewController+SetNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SetNavigationBar.swift"; sourceTree = "<group>"; };
 		ECB75D3325ACBA4E006DCD99 /* JokeDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JokeDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -59,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC8E0FB525C9898800C9176B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				EC79CE4525A64C4D00E7C58D /* Scherzo */,
+				EC8E0FB925C9898800C9176B /* ScherzoTests */,
 				EC79CE4425A64C4D00E7C58D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				EC79CE4325A64C4D00E7C58D /* Scherzo.app */,
+				EC8E0FB825C9898800C9176B /* ScherzoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,17 +108,26 @@
 			children = (
 				EC79CE4625A64C4D00E7C58D /* AppDelegate.swift */,
 				EC79CE4825A64C4D00E7C58D /* SceneDelegate.swift */,
-				EC9578E525C71BC700756BAF /* Utils */,
 				EC79CE4C25A64C4D00E7C58D /* Main.storyboard */,
 				ECB75D2725ACB988006DCD99 /* ViewController */,
 				ECB75D2525ACB980006DCD99 /* Model */,
 				EC79CE6125A64DE400E7C58D /* JokeService.swift */,
+				EC9578E525C71BC700756BAF /* Utils */,
 				ECB75D3225ACBA4E006DCD99 /* JokeDataModel.xcdatamodeld */,
 				EC79CE4F25A64C4E00E7C58D /* Assets.xcassets */,
 				EC79CE5125A64C4E00E7C58D /* LaunchScreen.storyboard */,
 				EC79CE5425A64C4E00E7C58D /* Info.plist */,
 			);
 			path = Scherzo;
+			sourceTree = "<group>";
+		};
+		EC8E0FB925C9898800C9176B /* ScherzoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC8E0FBA25C9898800C9176B /* ScherzoTests.swift */,
+				EC8E0FBC25C9898800C9176B /* Info.plist */,
+			);
+			path = ScherzoTests;
 			sourceTree = "<group>";
 		};
 		EC9578E525C71BC700756BAF /* Utils */ = {
@@ -147,17 +181,39 @@
 			productReference = EC79CE4325A64C4D00E7C58D /* Scherzo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EC8E0FB725C9898800C9176B /* ScherzoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC8E0FC125C9898800C9176B /* Build configuration list for PBXNativeTarget "ScherzoTests" */;
+			buildPhases = (
+				EC8E0FB425C9898800C9176B /* Sources */,
+				EC8E0FB525C9898800C9176B /* Frameworks */,
+				EC8E0FB625C9898800C9176B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC8E0FBE25C9898800C9176B /* PBXTargetDependency */,
+			);
+			name = ScherzoTests;
+			productName = ScherzoTests;
+			productReference = EC8E0FB825C9898800C9176B /* ScherzoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		EC79CE3B25A64C4D00E7C58D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					EC79CE4225A64C4D00E7C58D = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					EC8E0FB725C9898800C9176B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = EC79CE4225A64C4D00E7C58D;
 					};
 				};
 			};
@@ -176,6 +232,7 @@
 			projectRoot = "";
 			targets = (
 				EC79CE4225A64C4D00E7C58D /* Scherzo */,
+				EC8E0FB725C9898800C9176B /* ScherzoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +246,13 @@
 				EC79CE9A25B32B3F00A264D9 /* Localizable.strings in Resources */,
 				EC79CE5025A64C4E00E7C58D /* Assets.xcassets in Resources */,
 				EC79CE4E25A64C4D00E7C58D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8E0FB625C9898800C9176B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +279,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC8E0FB425C9898800C9176B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8E0FC425C98A0600C9176B /* JokeService.swift in Sources */,
+				EC8E0FBB25C9898800C9176B /* ScherzoTests.swift in Sources */,
+				EC8E0FC725C98AE700C9176B /* ApiJoke.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC8E0FBE25C9898800C9176B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC79CE4225A64C4D00E7C58D /* Scherzo */;
+			targetProxy = EC8E0FBD25C9898800C9176B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EC79CE4C25A64C4D00E7C58D /* Main.storyboard */ = {
@@ -404,6 +486,48 @@
 			};
 			name = Release;
 		};
+		EC8E0FBF25C9898800C9176B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4S3J7NRC9R;
+				INFOPLIST_FILE = ScherzoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mkshev.ScherzoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scherzo.app/Scherzo";
+			};
+			name = Debug;
+		};
+		EC8E0FC025C9898800C9176B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4S3J7NRC9R;
+				INFOPLIST_FILE = ScherzoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mkshev.ScherzoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scherzo.app/Scherzo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -421,6 +545,15 @@
 			buildConfigurations = (
 				EC79CE5825A64C4E00E7C58D /* Debug */,
 				EC79CE5925A64C4E00E7C58D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC8E0FC125C9898800C9176B /* Build configuration list for PBXNativeTarget "ScherzoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8E0FBF25C9898800C9176B /* Debug */,
+				EC8E0FC025C9898800C9176B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
