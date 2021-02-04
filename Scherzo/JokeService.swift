@@ -12,7 +12,7 @@ final class JokeService {
     private let session = URLSession(configuration: .default)
 
     func getJoke(completionHandler: @escaping (ApiJoke?) -> Void) {
-        let task = session.dataTask(with: url) { (data, resp, err) in
+        let task = session.dataTask(with: url) { (data, _, _) in
             guard let data = data else {
                 completionHandler(nil)
                 return
@@ -22,7 +22,7 @@ final class JokeService {
                 completionHandler(nil)
             }
         }
-        
+
         task.resume()
     }
 }

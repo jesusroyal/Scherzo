@@ -13,17 +13,17 @@ final class BookMarkTableViewController: UITableViewController {
     // MARK: - Private Properties
 
     private let cellReuseIdentifier = "bookMarkCell"
-    
+
     private var jokes = [Joke]()
-    
+
     private var coreDataContext: NSManagedObjectContext {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         return delegate.persistentContainer.viewContext
     }
-    
+
     private var gradient: CALayer {
         let gradientBackgroundColors = [Colors.green.cgColor, Colors.purple.cgColor]
-        let gradientLocations:[NSNumber] = [0.0, 1.0]
+        let gradientLocations: [NSNumber] = [0.0, 1.0]
         let gradient = CAGradientLayer()
         gradient.colors = gradientBackgroundColors
         gradient.locations = gradientLocations
@@ -32,7 +32,7 @@ final class BookMarkTableViewController: UITableViewController {
     }
 
     // MARK: - Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchJokes()
@@ -48,7 +48,7 @@ final class BookMarkTableViewController: UITableViewController {
         guard let array = try? coreDataContext.fetch(fetchRequest) else {return }
         self.jokes = array
     }
-    
+
     private func setupView() {
         self.title = "BookMarkTitle".localized
 

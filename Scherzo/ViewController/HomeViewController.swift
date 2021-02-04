@@ -8,16 +8,16 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    
+
     // MARK: - IBOutlets
-    
+
     @IBOutlet weak var setupLine: UILabel!
     @IBOutlet weak var punchLine: UILabel!
     @IBOutlet weak var addToBookMarks: UIButton!
     @IBOutlet weak var getJoke: UIButton!
-    
+
     // MARK: - Private Properties
-    
+
     private let service = JokeService()
     private var isLoading = false
     private var gradient: CALayer {
@@ -27,30 +27,30 @@ final class HomeViewController: UIViewController {
             gradient.frame = self.view.bounds
         return gradient
     }
-    
+
     // MARK: - Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         self.setNavigationBar()
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func setupView() {
         self.setupLine.text = ""
         self.punchLine.text = ""
         addToBookMarks.isHidden = true
         getJoke.layer.cornerRadius = getJoke.layer.frame.height / 3
         getJoke.backgroundColor = Colors.pink
-        
+
         self.title = "Scherzo"
-        
+
         self.view.layer.insertSublayer(gradient, at: 0)
-        
+
     }
-    
+
     private func saveJoke(title: String) {
                 let delegate = UIApplication.shared.delegate as! AppDelegate
                 let joke = Joke(context: delegate.persistentContainer.viewContext)
@@ -60,7 +60,7 @@ final class HomeViewController: UIViewController {
                 joke.title = title
                 delegate.saveContext()
     }
-    
+
     private func presentLoadingAlert() {
         let alert = UIAlertController(title: nil, message: "Loading".localized, preferredStyle: .alert)
 
@@ -73,7 +73,7 @@ final class HomeViewController: UIViewController {
         isLoading = true
         present(alert, animated: true)
     }
-    
+
     private func dismissLoadingAlert() {
         dismiss(animated: true) {
             self.isLoading = false
@@ -92,10 +92,10 @@ final class HomeViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    private func presentSaveToBookmarksAlert(){
+
+    private func presentSaveToBookmarksAlert() {
         let alert = UIAlertController(title: "SaveToBookmarks".localized, message: "SaveToBookmarksSub".localized, preferredStyle: .alert)
-        alert.addTextField() {textField in
+        alert.addTextField {textField in
             textField.text = "Title".localized
         }
         alert.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel, handler: nil))
@@ -104,14 +104,14 @@ final class HomeViewController: UIViewController {
         }))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    private func setJoke(_ joke: ApiJoke){
+
+    private func setJoke(_ joke: ApiJoke) {
         setupLine.text = joke.setup
         punchLine.text = joke.punchline
         addToBookMarks.isHidden = false
         dismissLoadingAlert()
     }
-    
+
     // MARK: - IBActions
 
     @IBAction func jokeDidTap(_ sender: UIButton) {
@@ -128,9 +128,8 @@ final class HomeViewController: UIViewController {
             }
         }
     }
-    
+
     @IBAction func addToBookmarksDidTap(_ sender: UIButton) {
         presentSaveToBookmarksAlert()
     }
 }
-
