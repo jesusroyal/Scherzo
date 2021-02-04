@@ -9,9 +9,9 @@ import UIKit
 import CoreData
 
 final class BookMarkTableViewController: UITableViewController {
-    
+
     // MARK: - Private Properties
-    
+
     private let cellReuseIdentifier = "bookMarkCell"
     
     private var jokes = [Joke]()
@@ -23,35 +23,35 @@ final class BookMarkTableViewController: UITableViewController {
     
     private var gradient: CALayer {
         let gradientBackgroundColors = [Colors.green.cgColor, Colors.purple.cgColor]
-        let gradientLocations:[NSNumber] = [0.0,1.0]
+        let gradientLocations:[NSNumber] = [0.0, 1.0]
         let gradient = CAGradientLayer()
         gradient.colors = gradientBackgroundColors
         gradient.locations = gradientLocations
         gradient.frame = self.tableView.bounds
         return gradient
     }
-    
+
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchJokes()
-        
+
         setupView()
         self.setNavigationBar()
     }
-    
+
     // MARK: - Private Methods
-    
-    private func fetchJokes(){
+
+    private func fetchJokes() {
         let fetchRequest: NSFetchRequest<Joke> = Joke.fetchRequest()
         guard let array = try? coreDataContext.fetch(fetchRequest) else {return }
         self.jokes = array
     }
     
-    private func setupView(){
+    private func setupView() {
         self.title = "BookMarkTitle".localized
-        
+
         let backgroundView = UIView(frame: self.tableView.bounds)
         backgroundView.layer.insertSublayer(gradient, at: 0)
         self.tableView.backgroundView = backgroundView
@@ -75,30 +75,28 @@ final class BookMarkTableViewController: UITableViewController {
 
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "showJoke", sender: jokes[indexPath.row])
     }
-    
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             coreDataContext.delete(jokes[indexPath.row])
             jokes.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
-            
         }
     }
-    
+
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "showJoke"){
+        if segue.identifier == "showJoke" {
             guard let destinationVC = segue.destination as? JokeDetailViewController, let joke = sender as? Joke else {
                 return
             }
